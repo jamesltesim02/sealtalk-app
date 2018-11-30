@@ -21,7 +21,7 @@
       var downloadButton = document.querySelector('#downloadButton');
       var downloadUrl = '';
       var ua = navigator.userAgent.toLowerCase();
-      if (ua.indexOf('ios') !== -1) {
+      if (ua.indexOf('applewebkit') !== -1) {
         downloadUrl = './app/ios/sealtalk.plist';
       } else {
         downloadUrl = './app/android/sealtalk.apk';
