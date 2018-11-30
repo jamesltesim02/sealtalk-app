@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>sealtalk app</title>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+    <style>
+      body {
+        margin: 0;
+        background: url(./images/bg0.png);
+        background-repeat: repeat-y;
+        background-size: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./images/bg1.png"><img id="downloadButton" src="./images/bg2.png">
+    <script>
+      var downloadButton = document.querySelector('#downloadButton');
+      var downloadUrl = '';
+      var ua = navigator.userAgent.toLowerCase();
+      if (ua.indexOf('ios') !== -1) {
+        downloadUrl = './app/ios/sealtalk.plist';
+      } else {
+        downloadUrl = './app/android/sealtalk.apk';
+      }
+      downloadButton.addEventListener('click', function () {
+        open(downloadUrl);
+      });
+    </script>
+  </body>
+</html>
